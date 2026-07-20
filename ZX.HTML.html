@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KL PANELL KEY</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:white;
+}
+
+.container{
+width:360px;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:170px;
+height:170px;
+border-radius:50%;
+overflow:hidden;
+margin:auto;
+box-shadow:0 0 35px red;
+border:4px solid #00c8ff;
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+h1{
+margin-top:20px;
+color:#ff00b7;
+letter-spacing:3px;
+}
+
+h2{
+color:#00d5ff;
+margin-bottom:20px;
+}
+
+input{
+width:100%;
+padding:14px;
+margin-top:15px;
+background:#111;
+border:2px solid #444;
+border-radius:12px;
+color:white;
+font-size:16px;
+outline:none;
+}
+
+button{
+width:100%;
+padding:14px;
+margin-top:18px;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+#generate{
+background:#00cfff;
+color:black;
+box-shadow:0 0 15px cyan;
+}
+
+#generate:hover{
+transform:scale(1.03);
+}
+
+#copy{
+background:#ff00aa;
+color:white;
+box-shadow:0 0 15px #ff00aa;
+}
+
+.card{
+margin-top:35px;
+padding:20px;
+background:#111;
+border-radius:15px;
+border:1px solid #444;
+}
+
+.join{
+margin-top:15px;
+background:linear-gradient(90deg,#ff00d4,#00d4ff);
+color:black;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+<img src="https://i.supaimg.com/487938e0-ff48-4d29-b82d-0e33e7379ad2/a565f4f4-7779-43c6-bf55-e8af72528351.jpg" alt="Logo">
+</div>
+
+<h1>KL PANELL KEY SITE</h1>
+<h2></h2>
+
+<input id="key" placeholder="Press Generate">
+
+<button id="generate">GENERATE KEY</button>
+
+<button id="copy">COPY KEY</button>
+
+<div class="card">
+<h3>❤️ Any Problem? Join Telegram</h3>
+
+<button class="join"
+onclick="window.open('https://t.me/yourchannel')">
+Join Now
+</button>
+
+</div>
+
+</div>
+
+<script>
+const fixedKey = "DP-VIP-D9REC0";
+
+document.getElementById("generate").onclick = function () {
+    document.getElementById("key").value = fixedKey;
+};
+
+document.getElementById("copy").onclick = function () {
+    const input = document.getElementById("key");
+    input.select();
+    input.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(input.value);
+    alert("Key Copied!");
+};
+</script>
+    
+</body>
+</html>
